@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "migration:generate": "typeorm-ts-node-commonjs -d src/data-source.ts migration:generate src/migrations/default",
+    "migration:run": "typeorm-ts-node-commonjs -d src/data-source.ts migration:run"
   },
   "keywords": [],
   "author": "",
